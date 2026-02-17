@@ -55,24 +55,18 @@
 
   // Typography settings
   show heading.where(level: 1): it => {
-    // 1. Set the font and color for the header text itself
+    pagebreak(weak: true)
     set text(
       font: self.fonts.heading,
       size: 25pt,
       fill: self.colors.primary,
     )
-
-    // Add some breathing room above the header
     v(1.5em, weak: true)
-
-    // 2. Wrap the heading in an underline to create the stroke
     underline(
-      stroke: 2pt + self.colors.secondary, // The color and thickness of the line
-      offset: 0.3em, // How far below the text the line sits (tweak as needed)
-      it, // The actual heading content
+      stroke: 2pt + self.colors.secondary,
+      offset: 0.3em,
+      it,
     )
-
-    // Add breathing room below the header before the paragraph starts
     v(1.5em, weak: true)
   }
 
