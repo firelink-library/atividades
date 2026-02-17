@@ -1,9 +1,8 @@
-#import "../colors.typ": colors
+#import "../state.typ": theme-state
 #let assets_dir = "../assets/"
 
-#let cover-page(
-  ctx,
-) = {
+#let cover-page() = context {
+  let ctx = theme-state.get()
   set page(
     margin: (top: 0cm, bottom: 0cm, left: 0cm, right: 0cm),
     header: none,
@@ -11,14 +10,14 @@
   )
 
   place(left + top, polygon(
-    fill: colors.primary,
+    fill: ctx.colors.primary,
     (0%, 0%),
     (8%, 0%),
     (8%, 100%),
     (0%, 100%),
   ))
   place(left + top, polygon(
-    fill: colors.secondary,
+    fill: ctx.colors.secondary,
     (0%, 100%),
     (8%, 90%),
     (100%, 100%),
@@ -33,12 +32,12 @@
       dy: -10%,
       [
         #if ctx.type != none {
-          text(font: ctx.heading-font, size: 14pt, fill: gray.darken(70%))[#ctx.type]
+          text(font: ctx.fonts.heading, size: 14pt, fill: gray.darken(70%))[#ctx.type]
         }
 
-        #text(font: ctx.heading-font, size: 14pt, fill: gray.darken(70%))[#ctx.course]
+        #text(font: ctx.fonts.heading, size: 14pt, fill: gray.darken(70%))[#ctx.course]
         #if ctx.module != none {
-          text(font: ctx.heading-font, size: 14pt, fill: gray.darken(70%))[ | módulo #ctx.module]
+          text(font: ctx.fonts.heading, size: 14pt, fill: gray.darken(70%))[ | módulo #ctx.module]
         }
       ],
     )
@@ -62,17 +61,17 @@
     [
       #box(
         stroke: (
-          paint: colors.secondary.lighten(20%),
+          paint: ctx.colors.secondary.lighten(20%),
           thickness: 2pt,
         ),
         inset: (x: 5%, y: 30%),
         [
           #if title != none {
             text(
-              font: ctx.heading-font,
+              font: ctx.fonts.heading,
               size: 33pt,
               weight: "bold",
-              fill: colors.primary,
+              fill: ctx.colors.primary,
             )[
               #ctx.title
             ]
@@ -82,9 +81,9 @@
 
       #if ctx.subtitle != none {
         text(
-          font: ctx.heading-font,
+          font: ctx.fonts.heading,
           size: 16pt,
-          fill: colors.primary,
+          fill: ctx.colors.primary,
         )[
           #ctx.subtitle
         ]
