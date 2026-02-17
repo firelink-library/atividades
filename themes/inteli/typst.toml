@@ -1,0 +1,17 @@
+[package]
+name = "inteli"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["inteli"]
+license = "MIT"
+description = "Problem set and handout template for inteli"
+repository = ""
+keywords = ["template", "handout", "problem-set", "academic", "inteli"]
+categories = ["report", "layout"]
+disciplines = ["computer-science", "education"]
+compiler = "0.12.0"
+
+[template]
+path = "template"
+thumbnail = "thumbnail.png"
+template = "main.typ"
