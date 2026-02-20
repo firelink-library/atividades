@@ -3,7 +3,7 @@
 #inteli-handout(
   title: [Estruturas de dados],
   subtitle: "Exercícios de implementação, conceito e algoritmos",
-  course: "Engenharia de Computação",
+  course: "Balanço técnico",
   // module: "5",
   type: "Lista de Exercícios",
   heading-font: "Alegreya Sans SC",
