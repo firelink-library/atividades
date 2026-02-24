@@ -49,6 +49,8 @@
   ```
 ]
 
+#pagebreak(weak: true)
+
 #problem[
   Crie um programa em C++ que implemente a operação de front (consultar início)
   em uma fila. O programa deve permitir visualizar o elemento do início da fila
@@ -87,6 +89,8 @@
   Tentando remover de fila vazia: ERRO - Fila vazia!
   ```
 ]
+
+#pagebreak(weak: true)
 
 #problem[
   Crie um programa em C++ que implemente uma fila completa usando lista
@@ -134,6 +138,8 @@
   ```
 ]
 
+#pagebreak(weak: true)
+
 #problem[
   Crie um programa em C++ que simule um sistema de atendimento bancário com
   múltiplos caixas. Clientes chegam e são atendidos em ordem de chegada (FIFO)
@@ -175,6 +181,8 @@
   ```
 ]
 
+#pagebreak(weak: true)
+
 #problem[
   Crie um programa em C++ que implemente um buffer circular (ring buffer) para
   comunicação entre processos produtor e consumidor. O buffer tem capacidade
@@ -206,28 +214,28 @@
 
   ```
   Capacidade do buffer: 4
-  
+
   Produzir: A
   Buffer: [A, _, _, _]  (in=1, out=0)
-  
+
   Produzir: B
   Buffer: [A, B, _, _]  (in=2, out=0)
-  
+
   Consumir: A
   Buffer: [_, B, _, _]  (in=2, out=1)
-  
+
   Produzir: C
   Buffer: [_, B, C, _]  (in=3, out=1)
-  
+
   Produzir: D
   Buffer: [_, B, C, D]  (in=0, out=1)  // circular!
-  
+
   Produzir: E
   Buffer: [E, B, C, D]  (in=1, out=1)  // sobrescreve? Não, espera!
-  
+
   Consumir: B
   Buffer: [E, _, C, D]  (in=1, out=2)
-  
+
   Produzir: E
   Buffer: [E, E, C, D]  (in=2, out=2)
   ```
@@ -257,15 +265,15 @@
 
   ```
   Capacidade da fila: 5 documentos
-  
+
   Usuário Ana envia: "relatorio.pdf" (10 páginas)
   Usuário Bruno envia: "foto.jpg" (1 página)
   Usuário Carla envia: "contrato.doc" (5 páginas)
   Usuário Daniel envia: "apresentacao.ppt" (15 páginas)
   Usuário Elisa envia: "planilha.xlsx" (3 páginas)
-  
+
   Fila cheia! (5/5 documentos)
-  
+
   Usuário Fabio envia: "artigo.pdf" (8 páginas)
   ```
 
@@ -278,9 +286,9 @@
   3. Daniel - apresentacao.ppt (15 pág)
   4. Elisa - planilha.xlsx (3 pág)
   5. Fabio - artigo.pdf (8 pág)
-  
+
   Documento substituído: Ana - relatorio.pdf (10 pág)
-  
+
   Total de páginas na fila: 32
   Tempo estimado: 6 min 24 seg
   ```

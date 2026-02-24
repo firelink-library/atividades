@@ -98,24 +98,7 @@
   ```
 ]
 
-#problem[
-  Crie um programa em C++ que insira um novo nó no final de uma lista
-  encadeada simples. O programa deve criar uma lista com alguns elementos,
-  solicitar um novo valor ao usuário e inseri-lo no final da lista.
-
-  *Exemplo de entrada*
-
-  ```
-  Lista original: 13 11 9 7 5 3 1
-  Digite o valor a ser inserido no final: 0
-  ```
-
-  *Exemplo de saída*
-
-  ```
-  Lista após inserção no final: 13 11 9 7 5 3 1 0
-  ```
-]
+#pagebreak(weak: true)
 
 #problem[
   Crie um programa em C++ que encontre o elemento do meio de uma lista
@@ -238,6 +221,8 @@
   ```
 ]
 
+#pagebreak(weak: true)
+
 #problem[
   Crie um programa em C++ que delete o primeiro nó de uma lista encadeada
   simples. O programa deve criar uma lista, exibi-la, remover o primeiro
@@ -293,6 +278,8 @@
   ```
 ]
 
+#pagebreak(weak: true)
+
 #problem[
   Crie um programa em C++ que delete o último nó de uma lista encadeada
   simples. O programa deve criar uma lista, exibi-la, remover o último
@@ -317,6 +304,8 @@
   Lista após remoção do último nó: 7 5
   ```
 ]
+
+#pagebreak(weak: true)
 
 #problem[
   Crie um programa em C++ que implemente um array dinâmico simples com
@@ -360,6 +349,8 @@
   Capacidade: 8
   ```
 ]
+
+#pagebreak(weak: true)
 
 #problem[
   Crie um programa em C++ que implemente uma classe Vector com comportamento

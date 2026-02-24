@@ -38,6 +38,8 @@
   ```
 ]
 
+#pagebreak(weak: true)
+
 #problem[
   Crie um programa em C++ que implemente o Selection Sort para ordenar um array
   de inteiros.
@@ -77,6 +79,8 @@
   Array ordenado: 10 13 14 29 37
   ```
 ]
+
+#pagebreak(weak: true)
 
 #problem[
   Crie um programa em C++ que implemente o Insertion Sort para ordenar um array
@@ -119,6 +123,8 @@
   Array ordenado: 2 5 6 11 12 13
   ```
 ]
+
+#pagebreak(weak: true)
 
 #problem[
   Crie um programa em C++ que implemente o Merge Sort.
@@ -224,3 +230,4 @@
   Array ordenado: 6 8 13 17 25 30 42
   ```
 ]
+

@@ -78,6 +78,8 @@
   ```
 ]
 
+#pagebreak(weak: true)
+
 #problem[
   Implemente um TAD `MatrizEsparsa` que represente uma matriz esparsa (com muitos elementos zero) de forma eficiente.
 
