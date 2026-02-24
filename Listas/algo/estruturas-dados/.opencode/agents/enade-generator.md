@@ -1,6 +1,6 @@
 ---
 description: Gera questões no estilo ENADE de estruturas de dados e algoritmos em formato Typst
-mode: agent
+mode: primary
 tools:
   write: true
   edit: true
