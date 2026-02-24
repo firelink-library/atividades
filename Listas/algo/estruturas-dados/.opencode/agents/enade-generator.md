@@ -1,9 +1,9 @@
 ---
 description: Gera questões no estilo ENADE de estruturas de dados e algoritmos em formato Typst
-mode: subagent
+mode: agent
 tools:
-  write: false
-  edit: false
+  write: true
+  edit: true
   bash: false
 ---
 
