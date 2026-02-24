@@ -67,7 +67,22 @@
       offset: 0.3em,
       it,
     )
-    v(1.5em, weak: true)
+    v(1.3em, weak: true)
+  }
+
+  show heading.where(level: 2): it => {
+    set text(
+      font: self.fonts.heading,
+      size: 18pt,
+      fill: self.colors.primary,
+    )
+    v(1.0em, weak: true)
+    underline(
+      stroke: 0pt + self.colors.secondary,
+      offset: 0.3em,
+      it,
+    )
+    v(0.8em, weak: true)
   }
 
   set text(
