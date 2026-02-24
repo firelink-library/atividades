@@ -12,6 +12,7 @@
   #include "problems/tad.typ"
   #include "problems/listas_arrays.typ"
   #include "problems/filas.typ"
+  #include "problems/ordenacao.typ"
   #include "problems/enade.typ"
   #include "problems/tipo_enade.typ"
 ]

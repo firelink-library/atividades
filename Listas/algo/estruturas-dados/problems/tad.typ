@@ -12,8 +12,6 @@
   - Calcular a distância entre dois pontos
   - Exibir o ponto no formato "(x, y)"
 
-  Este exercício introduz conceitos fundamentais de TAD: encapsulamento de dados e operações associadas.
-
   *Exemplo de uso*
 
   ```
@@ -36,8 +34,6 @@
   - Calcular a diferença em dias entre duas datas
   - Adicionar N dias a uma data
   - Exibir a data no formato "DD/MM/AAAA"
-
-  Este exercício trabalha validação, lógica de calendário e operações aritméticas.
 
   *Exemplo de uso*
 
@@ -68,8 +64,6 @@
   - Verificar se um conjunto é subconjunto de outro
   - Exibir elementos do conjunto
 
-  Este exercício trabalha estruturas dinâmicas e operações matemáticas sobre coleções.
-
   *Exemplo de uso*
 
   ```
@@ -95,8 +89,6 @@
   - Multiplicar duas matrizes esparsas
   - Transpor a matriz
   - Exibir matriz completa (incluindo zeros)
-
-  Este exercício avançado trabalha eficiência de memória, estruturas encadeadas e algoritmos de matriz.
 
   *Exemplo de uso*
 

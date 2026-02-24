@@ -7,9 +7,6 @@
   uma fila usando array. O programa deve permitir ao usuário inserir elementos
   na fila até atingir a capacidade máxima, exibindo mensagens apropriadas.
 
-  Este exercício introduz o conceito fundamental de inserção em filas (FIFO -
-  First In, First Out) e o gerenciamento do índice de inserção (rear).
-
   *Exemplo de entrada*
 
   ```
@@ -35,9 +32,6 @@
   em uma fila usando array. O programa deve permitir remover elementos do
   início da fila e exibir o elemento removido. Trate o caso de fila vazia.
 
-  Este exercício trabalha a remoção do início da fila e o gerenciamento do
-  índice de remoção (front).
-
   *Exemplo de entrada*
 
   ```
@@ -60,9 +54,6 @@
   em uma fila. O programa deve permitir visualizar o elemento do início da fila
   sem removê-lo, útil para verificar qual elemento será processado a seguir.
 
-  Este exercício introduz a operação de consulta que não altera a estrutura da
-  fila.
-
   *Exemplo de entrada*
 
   ```
@@ -84,9 +75,6 @@
   para consultar quantos elementos estão na fila e verificar se ela está vazia
   antes de operações de remoção.
 
-  Este exercício trabalha o gerenciamento do estado da fila e validações
-  importantes para evitar erros.
-
   *Exemplo de interação*
 
   ```
@@ -105,8 +93,25 @@
   encadeada. Ao contrário da implementação com array, a fila deve crescer
   dinamicamente conforme necessário, sem limite pré-definido de capacidade.
 
-  Este exercício demonstra a implementação de fila com alocação dinâmica,
-  utilizando ponteiros para o início (front) e fim (rear) da lista.
+  *Pseudo-código*
+
+  ```
+  enqueue(valor):
+      novo = criar_novo_no(valor)
+      se front = null:
+          front = novo
+          rear = novo
+      senão:
+          rear.next = novo
+          rear = novo
+
+  dequeue():
+      valor = front.valor
+      front = front.next
+      se front = null:
+          rear = null
+      retornar valor
+  ```
 
   *Exemplo de entrada*
 
@@ -138,9 +143,6 @@
   Cada cliente tem um tempo de atendimento aleatório ou pré-definido. O
   sistema processa clientes até que todos sejam atendidos, distribuindo-os
   entre os caixas disponíveis.
-
-  Este exercício aplica filas em um cenário realista de sistemas de atendimento,
-  demonstrando balanceamento de carga e análise de desempenho.
 
   *Exemplo de entrada*
 
@@ -183,9 +185,22 @@
   buffer a cada operação e como os índices de inserção e remoção circulam pelo
   array.
 
-  Este exercício demonstra a eficiência da fila circular em cenários de
-  streaming e comunicação entre processos, eliminando a necessidade de
-  deslocar elementos.
+  *Pseudo-código*
+
+  ```
+  enqueue(valor):
+      se (in + 1) % capacidade = out:
+          buffer cheio - esperar
+      buffer[in] = valor
+      in = (in + 1) % capacidade
+
+  dequeue():
+      se in = out:
+          buffer vazio - esperar
+      valor = buffer[out]
+      out = (out + 1) % capacidade
+      retornar valor
+  ```
 
   *Exemplo de simulação*
 
@@ -237,9 +252,6 @@
   Cada documento tem: ID, nome do usuário, nome do arquivo e número de páginas.
   O sistema deve mostrar a ordem de impressão e quais documentos foram
   substituídos quando a fila estava cheia.
-
-  Este exercício aplica fila circular com política de substituição em um
-  cenário real de gerenciamento de recursos compartilhados.
 
   *Exemplo de entrada*
 

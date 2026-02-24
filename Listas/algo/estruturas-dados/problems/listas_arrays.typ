@@ -8,9 +8,6 @@
   inserir valores na lista e, ao final, exibir todos os elementos na ordem em
   que foram inseridos.
 
-  Este exercício introduz os conceitos fundamentais de listas encadeadas:
-  criação de nós, inserção e travessia da lista.
-
   *Exemplo de entrada*
 
   ```
@@ -36,9 +33,6 @@
   quantidade de elementos e seus valores, e depois exibir a lista do último
   elemento para o primeiro.
 
-  Este exercício trabalha a travessia recursiva ou iterativa de listas
-  encadeadas em ordem reversa.
-
   *Exemplo de entrada*
 
   ```
@@ -63,9 +57,6 @@
   Crie um programa em C++ que crie uma lista encadeada simples de n nós e
   conte o número total de nós. O programa deve permitir inserir elementos na
   lista e, ao final, exibir a quantidade total de nós presentes.
-
-  Este exercício introduz a operação de contagem de elementos em uma lista
-  encadeada.
 
   *Exemplo de entrada*
 
@@ -93,9 +84,6 @@
   encadeada simples. O programa deve criar uma lista com alguns elementos,
   solicitar um novo valor ao usuário e inseri-lo no início da lista.
 
-  Este exercício trabalha a inserção no início da lista, atualizando o ponteiro
-  da cabeça (head).
-
   *Exemplo de entrada*
 
   ```
@@ -114,9 +102,6 @@
   Crie um programa em C++ que insira um novo nó no final de uma lista
   encadeada simples. O programa deve criar uma lista com alguns elementos,
   solicitar um novo valor ao usuário e inseri-lo no final da lista.
-
-  Este exercício trabalha a inserção no final da lista, percorrendo até o
-  último nó.
 
   *Exemplo de entrada*
 
@@ -138,8 +123,16 @@
   na posição central. Se a lista tiver número par de elementos, retorne o
   segundo elemento do meio.
 
-  Este exercício introduz o conceito de dois ponteiros (slow e fast) para
-  encontrar o meio da lista em uma única travessia.
+  *Pseudo-código*
+
+  ```
+  slow = head
+  fast = head
+  enquanto fast ≠ null e fast.next ≠ null:
+      slow = slow.next
+      fast = fast.next.next
+  retornar slow.valor
+  ```
 
   *Exemplo de entrada 1*
 
@@ -171,9 +164,6 @@
   encadeada simples. O programa deve criar uma lista, calcular a posição do
   meio e inserir o novo valor nessa posição.
 
-  Este exercício combina a busca pelo elemento do meio com a inserção em
-  posição específica.
-
   *Exemplo de entrada*
 
   ```
@@ -199,8 +189,6 @@
   simples. O programa deve criar uma lista, solicitar ao usuário uma posição
   e retornar o valor do nó nessa posição (1-indexed).
 
-  Este exercício trabalha o acesso por índice em listas encadeadas.
-
   *Exemplo de entrada*
 
   ```
@@ -220,9 +208,6 @@
   lista encadeada simples. O programa deve criar uma lista, solicitar ao
   usuário a posição e o valor a ser inserido, e inserir o nó na posição
   especificada (1-indexed).
-
-  Este exercício trabalha a inserção em posição arbitrária, tratando casos
-  especiais como inserção no início e no final.
 
   *Exemplo de entrada 1*
 
@@ -258,9 +243,6 @@
   simples. O programa deve criar uma lista, exibi-la, remover o primeiro
   elemento e exibir a lista atualizada.
 
-  Este exercício trabalha a remoção no início da lista, atualizando o
-  ponteiro da cabeça (head).
-
   *Exemplo de entrada*
 
   ```
@@ -279,9 +261,6 @@
   simples. O programa deve criar uma lista, calcular a posição do meio,
   remover o nó dessa posição e exibir a lista atualizada. O processo pode
   ser repetido até que reste apenas um elemento.
-
-  Este exercício combina a busca pelo elemento do meio com a remoção em
-  posição específica.
 
   *Exemplo de entrada*
 
@@ -320,9 +299,6 @@
   elemento e exibir a lista atualizada. O processo pode ser repetido
   múltiplas vezes.
 
-  Este exercício trabalha a remoção no final da lista, percorrendo até o
-  penúltimo nó.
-
   *Exemplo de entrada*
 
   ```
@@ -348,8 +324,19 @@
   elementos em um array, e quando o array está cheio, cria um novo array com
   o dobro do tamanho, copia os elementos e libera a memória antiga.
 
-  Este exercício demonstra o mecanismo fundamental de redimensionamento de
-  arrays dinâmicos: realocação e cópia de elementos.
+  *Pseudo-código*
+
+  ```
+  insert(valor):
+      se tamanho = capacidade:
+          novo_array = novo array[capacidade * 2]
+          copiar elementos para novo_array
+          liberar array antigo
+          array = novo_array
+          capacidade = capacidade * 2
+      array[tamanho] = valor
+      tamanho = tamanho + 1
+  ```
 
   *Exemplo de entrada*
 
@@ -382,8 +369,33 @@
   por índice (operator[]), e redimensionamento automático (dobrar quando cheio,
   reduzir pela metade quando muito vazio).
 
-  Este exercício implementa uma estrutura de dados completa com todas as
-  operações básicas de uma lista dinâmica.
+  *Pseudo-código*
+
+  ```
+  append(valor):
+      se tamanho = capacidade: redimensionar()
+      array[tamanho] = valor
+      tamanho = tamanho + 1
+
+  insert(pos, valor):
+      se tamanho = capacidade: redimensionar()
+      para i de tamanho até pos + 1:
+          array[i] = array[i-1]
+      array[pos] = valor
+      tamanho = tamanho + 1
+
+  pop():
+      tamanho = tamanho - 1
+      retornar array[tamanho]
+
+  remove(valor):
+      para i de 0 até tamanho-1:
+          se array[i] = valor:
+              para j de i até tamanho-1:
+                  array[j] = array[j+1]
+              tamanho = tamanho - 1
+              retornar
+  ```
 
   *Exemplo de interação*
 
@@ -414,9 +426,6 @@
   duplamente ligadas. O sistema deve permitir executar ações (com descrição),
   desfazer a última ação (undo) e refazer ações desfeitas (redo). Use duas
   listas: uma para ações executadas e outra para ações desfeitas.
-
-  Este exercício aplica listas duplamente ligadas em um cenário prático de
-  histórico de operações, demonstrando navegação bidirecional.
 
   *Exemplo de interação*
 
