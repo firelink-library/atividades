@@ -11,32 +11,33 @@
 
     part-counter.update(1)
 
-    block(
-      width: 100%,
-      [
-        #grid(
-          columns: (auto, 1fr),
-          align: top,
-          gutter: 0.5em,
-          text(
-            font: ctx.fonts.numbering,
-            size: 9pt,
-            weight: "bold",
-            fill: ctx.colors.secondary,
-          )[
-            #box(
-              circle(
-                radius: 0.90em,
-                stroke: 1.4pt + ctx.colors.secondary.lighten(10%),
-                align(center + horizon)[#prob-num],
-              ),
-            )
-          ],
-          move(dy: 3.5pt)[
-            #body
-          ],
-        )
-      ],
+    grid(
+      columns: (auto, 1fr),
+      gutter: 0.5em,
+      {
+        text(
+          font: ctx.fonts.numbering,
+          size: 9pt,
+          weight: "bold",
+          fill: ctx.colors.secondary,
+        )[
+          #box(
+            circle(
+              radius: 0.90em,
+              stroke: 1.4pt + ctx.colors.secondary.lighten(10%),
+              align(center + horizon)[#prob-num],
+            ),
+          )
+        ]
+      },
+      block(
+        width: 100%,
+        breakable: true,
+        [
+          #v(0.2em)
+          #body
+        ],
+      ),
     )
     v(2em)
   }
