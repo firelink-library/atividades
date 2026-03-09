@@ -13,6 +13,7 @@
   #include "problems/tabela.typ"
   #include "problems/karnaugh.typ"
   #include "problems/circuitos.typ"
+  #include "problems/sequencial.typ"
 ]
 
 

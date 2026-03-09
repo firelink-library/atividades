@@ -269,7 +269,9 @@
   Com base nos conceitos de teoria da complexidade, avalie as afirmações a seguir.
 
   I. A equação de recorrência que define a complexidade da função F é a mesma do algoritmo clássico de ordenação _mergesort_.
+
   II. O número de chamadas recursivas da função F é Θ(log n).
+
   III. O número de vezes que a função G da linha 4 é chamada é O(n log n).
 
   É correto o que se afirma em
